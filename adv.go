@@ -177,7 +177,7 @@ func (a *AdvPacket) AppendFlags(f byte) *AdvPacket {
 	return a.AppendField(typeFlags, []byte{f})
 }
 
-// AppendFlags appends a name field to the packet.
+// AppendName: appends a name field to the packet.
 // If the name fits in the space, it will be append as a complete name field, otherwise a short name field.
 func (a *AdvPacket) AppendName(n string) *AdvPacket {
 	typ := byte(typeCompleteName)

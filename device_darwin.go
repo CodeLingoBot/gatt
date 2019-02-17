@@ -363,7 +363,7 @@ func (d *device) CancelConnection(p Peripheral) {
 	d.sendCmd(32, xpc.Dict{"kCBMsgArgDeviceUUID": p.(*peripheral).id})
 }
 
-// process device events and asynchronous errors
+// HandleXpcEvent: process device events and asynchronous errors
 // (implements XpcEventHandler)
 func (d *device) HandleXpcEvent(event xpc.Dict, err error) {
 	if err != nil {

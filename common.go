@@ -116,7 +116,7 @@ func (s *Service) SetEndHandle(endh uint16) { s.endh = endh }
 // SetCharacteristics sets the Characteristics of the service.
 func (s *Service) SetCharacteristics(chars []*Characteristic) { s.chars = chars }
 
-// Characteristic returns the contained characteristic of this service.
+// Characteristics: Characteristic returns the contained characteristic of this service.
 func (s *Service) Characteristics() []*Characteristic { return s.chars }
 
 // A Characteristic is a BLE characteristic.
